@@ -75,7 +75,7 @@ def raw_to_h(infile, tablename):
     with open(infile, 'rb') as raw_file:
         raw_data = raw_file.read()
 
-    audio_array = array('B', raw_data)
+    audio_array = array('b', raw_data)
     tablename = tablename.split("\\")[::-1][0].replace(" ", "_")
     output_file_name = os.path.splitext(infile)[0] + ".h"
     
